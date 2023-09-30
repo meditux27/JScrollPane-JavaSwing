@@ -14,11 +14,7 @@
 
 ---
 
-[Estructura basica](https://github.com/meditux27/JFrame-JavaSwing/blob/main/principal/MiVentana.java)
-
-
-
-Las características más importantes de un `JScrollPane` en Swing son las siguientes:
+###### Las características más importantes de un `JScrollPane` en Swing son las siguientes:
 
 1. **Barras de desplazamiento**: `JScrollPane` proporciona barras de desplazamiento vertical y horizontal (según sea necesario) que permiten al usuario desplazarse a través del contenido cuando este es más grande que el área visible de la ventana.
 
@@ -101,6 +97,8 @@ Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 `frame.setVisible(true);`
 
 
+
+[Estructura basica](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/basic/EjemploJScrollPane.java)
 
 ---
 
