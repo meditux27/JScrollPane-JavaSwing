@@ -1,6 +1,8 @@
-# JScrollPane - JavaSwing<img title="" src="file:///home/rockoland/snap/marktext/9/.config/marktext/images/2023-09-30-08-46-50-image.png" alt="" width="318" data-align="center">
+# JScrollPane - JavaSwing
 
 
+
+<img title="" src="https://img2.freepng.es/20180501/clw/kisspng-computer-programming-f-programming-language-html-5ae85346225a62.8630014315251751101407.jpg" alt="" width="361" data-align="center">
 
 ##### Un JDialog se utiliza para crear y mostrar cuadros de diálogo en aplicaciones de escritorio.
 
