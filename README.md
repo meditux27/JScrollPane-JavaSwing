@@ -44,8 +44,6 @@
 
 `import javax.swing.*;`
 
-`import java.awt.*;`
-
 
 
 2. **Crea tu componente de contenido**:
@@ -54,7 +52,7 @@
 
    Por ejemplo, si deseas usar un `JTextArea`: 
 
-`JTextArea textArea = new JTextArea(10, 30); // Crea un JTextArea con 10 filas y 30 columnas`
+`JTextArea textArea = new JTextArea(10, 30);`
 
 
 
@@ -62,7 +60,7 @@
 
    A continuación, crea una instancia de `JScrollPane` y agrega tu componente de contenido al `JScrollPane`. Esto envolverá el componente de contenido y proporcionará las barras de desplazamiento necesarias.
 
-` JScrollPane scrollPane = new JScrollPane(textArea); // Envuelve el JTextArea con un JScrollPane`
+` JScrollPane scrollPane = new JScrollPane(textArea); `
 
 
 
@@ -70,31 +68,21 @@
 
    Puedes personalizar el comportamiento del `JScrollPane` según tus necesidades. Por ejemplo, puedes especificar si se deben mostrar barras de desplazamiento vertical, horizontal o ambas. También puedes configurar otros aspectos del comportamiento de desplazamiento, como las políticas de desplazamiento.
 
- 
-
 Personaliza el comportamiento (opcional)
 
 `scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);`
 
-`scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);`
+`scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);`
 
 
 
 5. **Agrega el `JScrollPane` a tu contenedor principal**:
 
-   Finalmente, agrega el `JScrollPane` al contenedor principal de tu interfaz de usuario (por lo general, un `JFrame` o un `JPanel`).
+Finalmente, agrega el `JScrollPane` al contenedor principal de tu interfaz de usuario (por lo general, un `JFrame` o un `JPanel`).
 
 Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 
-` JFrame frame = new JFrame("Ejemplo de JScrollPane");`
-
-`frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);`
-
-`frame.getContentPane().add(scrollPane); // Agrega el JScrollPane al contenido del JFrame`
-
-` frame.setSize(400, 300);`
-
-`frame.setVisible(true);`
+` frame.add(scrollPane);`
 
 
 
