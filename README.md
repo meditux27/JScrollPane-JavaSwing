@@ -1,12 +1,12 @@
-# JDialog - JavaSwing
+# JScrollPane - JavaSwing
 
-<img title="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__OoKLbDv-WH9nPOPVa3F8mR4qjnZhnsGCw&usqp=CAU" alt="" data-align="inline" width="354">
+<img title="" src="https://www.qfs.de/fileadmin/Webdata/logos-icons/java-swing-schriftzug.png" alt="" data-align="center" width="295">
+
+<img title="" src="https://docs.oracle.com/javase%2F7%2Fdocs%2Fapi%2F%2F/javax/swing/doc-files/JScrollPane-1.gif" alt="" width="145" data-align="center">
 
 ##### Un JDialog se utiliza para crear y mostrar cuadros de diálogo en aplicaciones de escritorio.
 
 ##### Un cuadro de diálogo es una ventana emergente que generalmente se utiliza para interactuar con el usuario de manera modal, lo que significa que el usuario debe completar la interacción con el cuadro de diálogo antes de volver a interactuar con la ventana principal de la aplicación
-
-
 
 ---
 
