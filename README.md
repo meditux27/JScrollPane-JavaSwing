@@ -8,9 +8,7 @@
 
 ##### JScrollPane se utiliza para agregar barras de desplazamiento a otros componentes, como JTextArea, JTable, JList, y otros, cuando su contenido es más grande que el área visible en la pantalla.
 
-##### La principal función de JScrollPane es permitir la visualización y navegación de contenido que no cabe completamente dentro del área visible del componente subyacente.
-
-##### Un JScrollPane proporciona tanto barras de desplazamiento horizontales como verticales (o solo una de ellas, dependiendo de las necesidades) y envuelve el componente al que se le desea agregar la funcionalidad de desplazamiento.
+##### La principal función de JScrollPane es permitir la visualización y navegación de contenido que no cabe completamente dentro del área visible del componente subyacente. Un JScrollPane proporciona tanto barras de desplazamiento horizontales como verticales (o solo una de ellas, dependiendo de las necesidades) y envuelve el componente al que se le desea agregar la funcionalidad de desplazamiento.
 
 ---
 
@@ -90,63 +88,45 @@ Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 
 ---
 
-> :beginner: Title()
+> :beginner: setViewportView()
 
 - Descripción
 
-Establece el título de la ventana 
+ Este método permite establecer el componente de contenido que se mostrará dentro del `JScrollPane`. El componente `view` será el contenido que se envuelve y se desplazará.
 
 - Sintaxis
 
-frame.setTitle(" texto ");
+scrollPane.setViewportView(textArea);
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
 
-<sub> Crear un JFrame</sub>  
-`JFrame frame = new JFrame();`
 
-<sub>Agregar setTitle </sub>  
-`frame.setTitle("Titulo de la ventana");`
 
-- Ejemplo
+`JScrollPane scrollPane = new JScrollPane();`
 
-[ setTitle]( https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+`JTextArea textArea = new JTextArea(10, 20);`
 
----
+//Se agrega el componente
 
-:beginner: Title()
+`scrollPane.setViewportView(textArea);`
 
-- Descripción
 
-Establece el título de la ventana
-
-- Sintaxis
-
-frame.setTitle(" texto ");
-
-- Nota
-
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
-
-Crear un JFrame  
-`JFrame frame = new JFrame();`
-
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[ setViewportView]( https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
 
 ---
 
-:beginner: Title()
+:beginner: getViewport()
 
 - Descripción
 
-Establece el título de la ventana
+Este método devuelve el componente que actúa como la ventana gráfica, es decir, el área visible a través del cual se ve el contenido. Puedes acceder a sus propiedades para personalizar su comportamiento.
+
+
 
 - Sintaxis
 
@@ -168,11 +148,11 @@ Agregar setTitle
 
 ---
 
-:beginner: Title()
+:beginner: getViewport().scrollRectToVisible(()
 
 - Descripción
 
-Establece el título de la ventana
+Utiliza este método para establecer un borde alrededor del `JScrollPane` para personalizar su apariencia.
 
 - Sintaxis
 
@@ -194,11 +174,13 @@ Agregar setTitle
 
 ---
 
-:beginner: Title()
+
+
+:beginner: setHorizontalScrollBarPolicy()  &  setVerticalScrollBarPolicy()
 
 - Descripción
 
-Establece el título de la ventana
+Estos métodos permiten establecer la política de visibilidad de las barras de desplazamiento vertical y horizontal respectivamente.
 
 - Sintaxis
 
@@ -220,11 +202,13 @@ Agregar setTitle
 
 ---
 
-:beginner: Title()
+:beginner: getVerticalScrollBar()  &  getHorizontalScrollBar()
 
 - Descripción
 
-Establece el título de la ventana
+Estos métodos te permiten acceder a los objetos `JScrollBar` correspondientes a las barras de desplazamiento vertical y horizontal, respectivamente. Puedes personalizar sus propiedades, como su valor actual, su rango, etc.
+
+
 
 - Sintaxis
 
@@ -246,11 +230,11 @@ Agregar setTitle
 
 ---
 
-:beginner: Title()
+:beginner: setWheelScrollingEnabled()
 
 - Descripción
 
-Establece el título de la ventana
+Este método permite habilitar o deshabilitar el desplazamiento con la rueda del ratón en el `JScrollPane`.
 
 - Sintaxis
 
@@ -272,11 +256,13 @@ Agregar setTitle
 
 ---
 
-:beginner: Title()
+:beginner: setPreferredSize()
 
 - Descripción
 
-Establece el título de la ventana
+Puedes establecer el tamaño preferido del `JScrollPane` con este método, lo que afectará cómo se ajusta y se muestra el contenido.
+
+
 
 - Sintaxis
 
@@ -298,11 +284,11 @@ Agregar setTitle
 
 ---
 
-:beginner: Title()
+:beginner: setBorder()
 
 - Descripción
 
-Establece el título de la ventana
+Utiliza este método para establecer un borde alrededor del `JScrollPane` para personalizar su apariencia.
 
 - Sintaxis
 
@@ -324,11 +310,13 @@ Agregar setTitle
 
 ---
 
-:beginner: Title()
+:beginner: setComponentOrientation(()
 
 - Descripción
 
-Establece el título de la ventana
+Este método te permite establecer la orientación de los componentes dentro del `JScrollPane`. Esto es útil cuando trabajas con idiomas que se escriben de derecha a izquierda.
+
+
 
 - Sintaxis
 
@@ -347,5 +335,3 @@ Agregar setTitle
 - Ejemplo
 
 [setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
-
----
