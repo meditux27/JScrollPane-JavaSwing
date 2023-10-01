@@ -128,11 +128,9 @@ Para ver el funciónamiento del método, es necesario no solo recibir el paramet
 
 `viewport.setBackground(Color.lightGray);`
 
-
-
 - Ejemplo
 
-[getViewport](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[getViewport](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/ScrollPaneViewportExample.java)
 
 ---
 
@@ -140,25 +138,45 @@ Para ver el funciónamiento del método, es necesario no solo recibir el paramet
 
 - Descripción
 
-Estos métodos permiten establecer la política de visibilidad de las barras de desplazamiento vertical y horizontal respectivamente.
+Estos métodos permiten controlar cuándo se mostrarán las barras de desplazamiento y cómo se comportarán en función de las necesidades de la aplicación.
 
 - Sintaxis
 
-frame.setTitle(" texto ");
+JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED  
+
+o
+
+JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
+`setHorizontalScrollBarPolicy(int policy)`
 
-Crear un JFrame  
-`JFrame frame = new JFrame();`
+Este método se utiliza para establecer la política de visualización de la barra de desplazamiento horizontal en un JScrollPane. Toma un argumento de tipo entero que especifica la política y puede ser uno de los siguientes valores:
 
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
+- `JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED`: La barra de desplazamiento horizontal se mostrará automáticamente cuando sea necesario, es decir, cuando el contenido sea más ancho que el área visible en el JScrollPane.
+
+- `JScrollPane.HORIZONTAL_SCROLLBAR_NEVER`: La barra de desplazamiento horizontal nunca se mostrará, incluso si el contenido es más ancho que el área visible. Esto puede ser útil si no deseas permitir el desplazamiento horizontal en absoluto.
+
+- `JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento horizontal se mostrará siempre, independientemente de si el contenido es más ancho que el área visible o no.
+
+
+
+`setVerticalScrollBarPolicy(int policy)`: Este método es similar al anterior, pero se utiliza para establecer la política de visualización de la barra de desplazamiento vertical en el JScrollPane. También toma un argumento de tipo entero que puede ser uno de los siguientes valores:
+
+- `JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED`: La barra de desplazamiento vertical se mostrará automáticamente cuando sea necesario, es decir, cuando el contenido sea más alto que el área visible en el JScrollPane.
+
+- `JScrollPane.VERTICAL_SCROLLBAR_NEVER`: La barra de desplazamiento vertical nunca se mostrará, incluso si el contenido es más alto que el área visible.
+
+- `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento vertical se mostrará siempre, independientemente de si el contenido es más alto que el área visible o no.
+
+
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[setHorizontalScrollBarPolicy() & setVerticalScrollBarPolicy()](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneScrollbar.java)
+
+
 
 ---
 
