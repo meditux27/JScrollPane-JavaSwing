@@ -1,10 +1,6 @@
 # JScrollPane - JavaSwing
 
-
-
 <img title="" src="https://www.jrebel.com/sites/default/files/image/2019-11/image-blog-pick-right-java-executors.jpg" alt="" width="361" data-align="inline">
-
-
 
 ##### JScrollPane se utiliza para agregar barras de desplazamiento a otros componentes, como JTextArea, JTable, JList, y otros, cuando su contenido es más grande que el área visible en la pantalla.
 
@@ -42,8 +38,6 @@
 
 `import javax.swing.*;`
 
-
-
 2. **Crea tu componente de contenido**:
 
    Primero, crea el componente de Swing que deseas envolver con un `JScrollPane`. Esto puede ser un `JTextArea`, `JTable`, `JList`, o cualquier otro componente que necesite barras de desplazamiento para mostrar su contenido.
@@ -52,15 +46,11 @@
 
 `JTextArea textArea = new JTextArea(10, 30);`
 
-
-
 3. **Crea un `JScrollPane` y agrega tu componente de contenido**:
 
    A continuación, crea una instancia de `JScrollPane` y agrega tu componente de contenido al `JScrollPane`. Esto envolverá el componente de contenido y proporcionará las barras de desplazamiento necesarias.
 
 ` JScrollPane scrollPane = new JScrollPane(textArea); `
-
-
 
 4. **Personaliza el comportamiento (opcional)**:
 
@@ -72,8 +62,6 @@ Personaliza el comportamiento (opcional)
 
 `scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);`
 
-
-
 5. **Agrega el `JScrollPane` a tu contenedor principal**:
 
 Finalmente, agrega el `JScrollPane` al contenedor principal de tu interfaz de usuario (por lo general, un `JFrame` o un `JPanel`).
@@ -81,8 +69,6 @@ Finalmente, agrega el `JScrollPane` al contenedor principal de tu interfaz de us
 Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 
 ` frame.add(scrollPane);`
-
-
 
 [Estructura basica](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/basic/EjemploJScrollPane.java)
 
@@ -102,8 +88,6 @@ scrollPane.setViewportView(textArea);
 
 Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
 
-
-
 `JScrollPane scrollPane = new JScrollPane();`
 
 `JTextArea textArea = new JTextArea(10, 20);`
@@ -112,11 +96,9 @@ Por lo general, se pasa el componente que deseas hacer desplazable, como un JTex
 
 `scrollPane.setViewportView(textArea);`
 
-
-
 - Ejemplo
 
-[ setViewportView]( https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[ setViewportView]( https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
 
 ---
 
@@ -124,57 +106,35 @@ Por lo general, se pasa el componente que deseas hacer desplazable, como un JTex
 
 - Descripción
 
-Este método devuelve el componente que actúa como la ventana gráfica, es decir, el área visible a través del cual se ve el contenido. Puedes acceder a sus propiedades para personalizar su comportamiento.
-
-
+Este método devuelve el área de visualización o "Viewport" asociada a ese `JScrollPane`. El `Viewport` es la parte del `JScrollPane` que muestra el contenido desplazable, como un `JTextArea`, una tabla o cualquier otro componente que pueda ser más grande que el área de visualización del `JScrollPane`.
 
 - Sintaxis
 
-frame.setTitle(" texto ");
+scrollPane.getViewport();
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
+Para ver el funciónamiento del método, es necesario no solo recibir el parametro si no, evidenciar tanto los datos obtenidos como manipularlos 
 
-Crear un JFrame  
-`JFrame frame = new JFrame();`
+// Crear un JScrollPane y agregar el JTextArea a él 
 
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
+`JScrollPane scrollPane = new JScrollPane(textArea); `
 
-- Ejemplo
+// Obtener el Viewport del JScrollPane 
 
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+`JViewport viewport = scrollPane.getViewport();`
 
----
+// Cambiar el color de fondo del Viewport 
 
-:beginner: getViewport().scrollRectToVisible(()
+`viewport.setBackground(Color.lightGray);`
 
-- Descripción
 
-Utiliza este método para establecer un borde alrededor del `JScrollPane` para personalizar su apariencia.
-
-- Sintaxis
-
-frame.setTitle(" texto ");
-
-- Nota
-
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
-
-Crear un JFrame  
-`JFrame frame = new JFrame();`
-
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[getViewport](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
 
 ---
-
-
 
 :beginner: setHorizontalScrollBarPolicy()  &  setVerticalScrollBarPolicy()
 
@@ -207,8 +167,6 @@ Agregar setTitle
 - Descripción
 
 Estos métodos te permiten acceder a los objetos `JScrollBar` correspondientes a las barras de desplazamiento vertical y horizontal, respectivamente. Puedes personalizar sus propiedades, como su valor actual, su rango, etc.
-
-
 
 - Sintaxis
 
@@ -262,8 +220,6 @@ Agregar setTitle
 
 Puedes establecer el tamaño preferido del `JScrollPane` con este método, lo que afectará cómo se ajusta y se muestra el contenido.
 
-
-
 - Sintaxis
 
 frame.setTitle(" texto ");
@@ -315,8 +271,6 @@ Agregar setTitle
 - Descripción
 
 Este método te permite establecer la orientación de los componentes dentro del `JScrollPane`. Esto es útil cuando trabajas con idiomas que se escriben de derecha a izquierda.
-
-
 
 - Sintaxis
 
