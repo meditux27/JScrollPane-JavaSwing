@@ -194,17 +194,11 @@ JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
 
 `JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();`
 
-
-
 `getHorizontalScrollBar()`: Similar al método anterior, este se utiliza para obtener una referencia a la barra de desplazamiento horizontal de un componente.
 
 `JScrollPane scrollPane = new JScrollPane();` 
 
 `JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();`
-
-
-
-
 
 - Ejemplo
 
