@@ -160,8 +160,6 @@ Este método se utiliza para establecer la política de visualización de la bar
 
 - `JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento horizontal se mostrará siempre, independientemente de si el contenido es más ancho que el área visible o no.
 
-
-
 `setVerticalScrollBarPolicy(int policy)`: Este método es similar al anterior, pero se utiliza para establecer la política de visualización de la barra de desplazamiento vertical en el JScrollPane. También toma un argumento de tipo entero que puede ser uno de los siguientes valores:
 
 - `JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED`: La barra de desplazamiento vertical se mostrará automáticamente cuando sea necesario, es decir, cuando el contenido sea más alto que el área visible en el JScrollPane.
@@ -170,13 +168,9 @@ Este método se utiliza para establecer la política de visualización de la bar
 
 - `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento vertical se mostrará siempre, independientemente de si el contenido es más alto que el área visible o no.
 
-
-
 - Ejemplo
 
 [setHorizontalScrollBarPolicy() & setVerticalScrollBarPolicy()](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneScrollbar.java)
-
-
 
 ---
 
@@ -188,21 +182,33 @@ Estos métodos te permiten acceder a los objetos `JScrollBar` correspondientes a
 
 - Sintaxis
 
-frame.setTitle(" texto ");
+JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();
+
+JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
+`getVerticalScrollBar()`: Este método se utiliza para obtener una referencia a la barra de desplazamiento vertical de un componente. Por lo general, se llama en un objeto JScrollPane para acceder a su barra de desplazamiento vertical.
 
-Crear un JFrame  
-`JFrame frame = new JFrame();`
+`JScrollPane scrollPane = new JScrollPane();`
 
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
+`JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();`
+
+
+
+`getHorizontalScrollBar()`: Similar al método anterior, este se utiliza para obtener una referencia a la barra de desplazamiento horizontal de un componente.
+
+`JScrollPane scrollPane = new JScrollPane();` 
+
+`JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();`
+
+
+
+
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[getVerticalScrollBar() & getHorizontalScrollBar()](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/CustomScrollBarExample.java)
 
 ---
 
