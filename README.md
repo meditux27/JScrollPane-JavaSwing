@@ -208,7 +208,7 @@ JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
 
 - Ejemplo
 
-[getVerticalScrollBar() & getHorizontalScrollBar()](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/CustomScrollBarExample.java)
+[getVerticalScrollBar() & getHorizontalScrollBar()](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/CustomScrollBarExample.java)
 
 ---
 
