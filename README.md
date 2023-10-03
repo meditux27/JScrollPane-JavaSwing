@@ -224,9 +224,11 @@ Para el uso del metodo se debe instanciar JScrollpane, posteriormente llamar la 
 
 `JScrollPane scrollPane = new JScrollPane();`
 // Habilitar el desplazamiento mediante la rueda del ratón
+
 `scrollPane.setWheelScrollingEnabled(true);`
 
 // O deshabilitar el desplazamiento mediante la rueda del ratón
+
 `scrollPane.setWheelScrollingEnabled(false);`
 
 - Ejemplo
