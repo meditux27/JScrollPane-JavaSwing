@@ -102,7 +102,7 @@ Por lo general, se pasa el componente que deseas hacer desplazable, como un JTex
 
 ---
 
-:beginner: getViewport()
+> :beginner: getViewport()
 
 - Descripción
 
@@ -134,7 +134,7 @@ Para ver el funciónamiento del método, es necesario no solo recibir el paramet
 
 ---
 
-:beginner: setHorizontalScrollBarPolicy()  &  setVerticalScrollBarPolicy()
+> :beginner: setHorizontalScrollBarPolicy()  &  setVerticalScrollBarPolicy()
 
 - Descripción
 
@@ -174,7 +174,7 @@ Este método se utiliza para establecer la política de visualización de la bar
 
 ---
 
-:beginner: getVerticalScrollBar()  &  getHorizontalScrollBar()
+> :beginner: getVerticalScrollBar()  &  getHorizontalScrollBar()
 
 - Descripción
 
@@ -206,7 +206,7 @@ JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
 
 ---
 
-:beginner: setWheelScrollingEnabled()
+> :beginner: setWheelScrollingEnabled()
 
 - Descripción
 
@@ -238,33 +238,7 @@ Para el uso del metodo se debe instanciar JScrollpane, posteriormente llamar la 
 
 ---
 
-:beginner: setPreferredSize()
-
-- Descripción
-
-Puedes establecer el tamaño preferido del `JScrollPane` con este método, lo que afectará cómo se ajusta y se muestra el contenido.
-
-- Sintaxis
-
-frame.setTitle(" texto ");
-
-- Nota
-
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
-
-Crear un JFrame  
-`JFrame frame = new JFrame();`
-
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
-
-- Ejemplo
-
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
-
----
-
-:beginner: setBorder()
+> :beginner: setBorder()
 
 - Descripción
 
