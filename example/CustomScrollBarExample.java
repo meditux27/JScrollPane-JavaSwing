@@ -21,7 +21,7 @@ public class CustomScrollBarExample {
 
         // Personalizar la apariencia de la barra de desplazamiento vertical
         verticalScrollBar.setBackground(Color.RED);
-        verticalScrollBar.setForeground(Color.BLUE);
+        
         verticalScrollBar.setPreferredSize(new Dimension(20, 0));
 
         // Personalizar el comportamiento de la barra de desplazamiento horizontal

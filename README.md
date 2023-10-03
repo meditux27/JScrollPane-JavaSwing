@@ -214,21 +214,24 @@ Este método permite habilitar o deshabilitar el desplazamiento con la rueda del
 
 - Sintaxis
 
-frame.setTitle(" texto ");
+scrollPane.setWheelScrollingEnabled(true | false);
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
+Cuando está habilitado, los usuarios pueden usar la rueda del ratón para desplazarse hacia arriba o hacia abajo en el contenido dentro del `JScrollPane`. Cuando está deshabilitado, la rueda del ratón no tendrá efecto en el `JScrollPane`, y el desplazamiento solo se puede realizar a través de las barras de desplazamiento si están presentes.
 
-Crear un JFrame  
-`JFrame frame = new JFrame();`
+Para el uso del metodo se debe instanciar JScrollpane, posteriormente llamar la variable asignada y agregar .setWheelScrollingEnabled()
 
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
+`JScrollPane scrollPane = new JScrollPane();`
+// Habilitar el desplazamiento mediante la rueda del ratón
+`scrollPane.setWheelScrollingEnabled(true);`
+
+// O deshabilitar el desplazamiento mediante la rueda del ratón
+`scrollPane.setWheelScrollingEnabled(false);`
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[setWheelScrollingEnabled](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/SetWheelScrolling.java)
 
 ---
 
