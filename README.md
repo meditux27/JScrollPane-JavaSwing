@@ -223,6 +223,7 @@ Cuando está habilitado, los usuarios pueden usar la rueda del ratón para despl
 Para el uso del metodo se debe instanciar JScrollpane, posteriormente llamar la variable asignada y agregar .setWheelScrollingEnabled()
 
 `JScrollPane scrollPane = new JScrollPane();`
+
 // Habilitar el desplazamiento mediante la rueda del ratón
 
 `scrollPane.setWheelScrollingEnabled(true);`
