@@ -246,17 +246,91 @@ Utiliza este método para establecer un borde alrededor del `JScrollPane` para p
 
 - Sintaxis
 
-frame.setTitle(" texto ");
+scrollPane.setBorder(border);
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
+Este método toma como argumento un objeto que implementa la interfaz `Border`, que puede ser una de las clases proporcionadas por la biblioteca Swing, como `LineBorder`, `EtchedBorder`, `BevelBorder`, `TitledBorder`, entre otras, o puedes crear una clase personalizada que implemente la interfaz `Border`.
 
-Crear un JFrame  
-`JFrame frame = new JFrame();`
+.::`LineBorder` ::.
 
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
+Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde simple de línea alrededor de un componente. Puedes usar `LineBorder` con el método `setBorder` para darle a un componente un borde de línea con un color y grosor específicos.
+
+`LineBorder lineBorder = new LineBorder(Color.BLUE, 2);`
+
+Puedes personalizar las siguientes propiedades del `LineBorder` según tus preferencias:
+
+1. **Color**: Puedes especificar el color del borde mediante el constructor de `LineBorder`. En el ejemplo anterior, usamos `Color.BLUE`.
+
+2. **Grosor**: Puedes definir el grosor del borde en píxeles. En el ejemplo, usamos un grosor de 2 píxeles mediante `new LineBorder(Color.BLUE, 2)`.
+
+3. **RoundedCorners**: Puedes habilitar o deshabilitar las esquinas redondeadas del borde utilizando un tercer argumento en el constructor. Por ejemplo, `new LineBorder(Color.BLUE, 2, true)` habilitaría las esquinas redondeadas.
+
+4. 
+
+`LineBorder lineBorder = new LineBorder(Color.BLUE, 2,true);`
+
+.::`EtchedBorder`::.
+
+Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde con efecto de relieve o grabado alrededor de un componente. Puedes usar `EtchedBorder` con el método `setBorder` para darle a un componente un aspecto en relieve, que puede ser útil para resaltar o separar visualmente ciertos componentes en tu interfaz de usuario.
+
+`EtchedBorder etchedBorder = new EtchedBorder(EtchedBorder.RAISED);`
+
+Puedes personalizar las siguientes propiedades del `EtchedBorder` según tus preferencias:
+
+1. **Tipo de relieve (`RAISED` o `LOWERED`)**: Puedes elegir el tipo de relieve que deseas aplicar al borde, ya sea `EtchedBorder.RAISED` para un efecto de relieve o `EtchedBorder.LOWERED` para un efecto de hundimiento.
+
+2. **Color del borde**: Puedes especificar el color del borde del relieve o hundimiento utilizando el constructor de la clase `EtchedBorder`. 
+
+3. **Color del sombreado**: Para personalizar el color del sombreado en el relieve o hundimiento
+
+`EtchedBorder border=new EtchedBorder(EtchedBorder.LOWERED,Color.BLUE,Color.green);`
+
+
+
+.::`EmptyBorder`::.
+
+Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde vacío o sin decoración alrededor de un componente. Puedes usar `EmptyBorder` con el método `setBorder` para establecer un espacio en blanco alrededor del componente sin ningún tipo de línea o decoración visual.
+
+`EmptyBorder emptyBorder = new EmptyBorder(10, 20, 10, 20);`
+
+En el ejemplo anterior, hemos creado un `EmptyBorder` con márgenes personalizados de 10 píxeles en la parte superior, 20 píxeles a la derecha, 10 píxeles en la parte inferior y 20 píxeles a la izquierda. Puedes ajustar estos valores según tus necesidades para crear un espacio en blanco alrededor del componente.
+
+
+
+.:: `BevelBorder`::.
+
+Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde con efecto de biselado alrededor de un componente. Puedes usar `BevelBorder` con el método `setBorder` para darle a un componente un aspecto de biselado, que puede ser útil para resaltar o separar visualmente ciertos componentes en tu interfaz de usuario.Los bordes biselados tienen una apariencia tridimensional que puede ayudar a resaltar y dar profundidad a los componentes.
+
+
+
+La clase `BevelBorder` permite configurar si deseas un borde con un efecto de relieve o de hundimiento (biselado hacia arriba o hacia abajo). Tienes dos constantes principales para especificar el tipo de biselado:
+
+
+
+**Tipo de borde (`RAISED` o `LOWERED`)**: Puedes especificar si el efecto de bisel debe ser "levantado" (`RAISED`) o "hundido" (`LOWERED`) utilizando el primer argumento en el constructor del `BevelBorder`.
+
+
+
+**Colores personalizados**: Puedes especificar los colores que se utilizarán para el efecto de bisel en las esquinas superior izquierda (`highlightOuterColor`) e inferior derecha (`shadowOuterColor`) y en las esquinas inferior izquierda (`highlightInnerColor`) y superior derecha (`shadowInnerColor`). Estos colores se pasan como argumentos en el constructor.
+
+
+
+BevelBorder customHighlightBorder = new BevelBorder(BevelBorder.RAISED o LOWERED,  highlightOuterColor,highlightInnerColor,shadowOuterColor, shadowInnerColor);
+
+
+
+`BevelBorder border = new BevelBorder(BevelBorder.LOWERED,`
+
+`Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW);`
+
+
+
+.::`TitledBorder`::. 
+
+Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para agregar un título con borde a un componente, como un `JPanel`, `JScrollPane`, o cualquier otro componente que pueda recibir un borde. Esto permite etiquetar y dar contexto a un componente dentro de la interfaz de usuario.
+
+`TitledBorder titledBorder = new TitledBorder("Este es un panel con título");`
 
 - Ejemplo
 
