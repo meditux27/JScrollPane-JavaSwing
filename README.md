@@ -384,18 +384,26 @@ Este método te permite establecer la orientación de los componentes dentro del
 
 - Sintaxis
 
-frame.setTitle(" texto ");
+`setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);`
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
+La orientación de los componentes se refiere a cómo se disponen y se ajustan los elementos dentro del JScrollPane, especialmente en entornos de escritura de derecha a izquierda, como el árabe o el hebreo. Para implementarlo es necesario instanciar JScrollPane y posteriormente llamar a la variable correspondiente de la instancia
 
-Crear un JFrame  
-`JFrame frame = new JFrame();`
+Crear un JScrollPane  
 
-Agregar setTitle  
-`frame.setTitle("Titulo de la ventana");`
+```java
+JScrollPane scrollPane = new JScrollPane(textArea);
+```
+
+ Establecer la orientación de los componentes a RIGHT_TO_LEFT 
+
+```java
+scrollPane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+```
+
+
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[setComponentOrientation](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/setComponentOrientationExample.java)
