@@ -252,7 +252,7 @@ scrollPane.setBorder(border);
 
 Este método toma como argumento un objeto que implementa la interfaz `Border`, que puede ser una de las clases proporcionadas por la biblioteca Swing, como `LineBorder`, `EtchedBorder`, `BevelBorder`, `TitledBorder`, entre otras, o puedes crear una clase personalizada que implemente la interfaz `Border`.
 
-.::`LineBorder` ::.
+.::**`LineBorder`** ::.
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde simple de línea alrededor de un componente. Puedes usar `LineBorder` con el método `setBorder` para darle a un componente un borde de línea con un color y grosor específicos.
 
@@ -270,7 +270,7 @@ Puedes personalizar las siguientes propiedades del `LineBorder` según tus prefe
 
 `LineBorder lineBorder = new LineBorder(Color.BLUE, 2,true);`
 
-.::`EtchedBorder`::.
+.::**`EtchedBorder`**::.
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde con efecto de relieve o grabado alrededor de un componente. Puedes usar `EtchedBorder` con el método `setBorder` para darle a un componente un aspecto en relieve, que puede ser útil para resaltar o separar visualmente ciertos componentes en tu interfaz de usuario.
 
@@ -304,11 +304,13 @@ La clase `BevelBorder` permite configurar si deseas un borde con un efecto de re
 
 **Colores personalizados**: Puedes especificar los colores que se utilizarán para el efecto de bisel en las esquinas superior izquierda (`highlightOuterColor`) e inferior derecha (`shadowOuterColor`) y en las esquinas inferior izquierda (`highlightInnerColor`) y superior derecha (`shadowInnerColor`). Estos colores se pasan como argumentos en el constructor.
 
-BevelBorder customHighlightBorder = new BevelBorder(BevelBorder.RAISED o LOWERED,  highlightOuterColor,highlightInnerColor,shadowOuterColor, shadowInnerColor);
+`BevelBorder customHighlightBorder = new BevelBorder(BevelBorder.RAISED o LOWERED,highlightOuterColor,highlightInnerColor,shadowOuterColor, shadowInnerColor);`
 
-`BevelBorder border = new BevelBorder(BevelBorder.LOWERED,`
+```java
+BevelBorder border = new BevelBorder(BevelBorder.LOWERED,Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW);
+```
 
-`Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW);`
+
 
 .::`TitledBorder`::. 
 
