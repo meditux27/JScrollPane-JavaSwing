@@ -286,8 +286,6 @@ Puedes personalizar las siguientes propiedades del `EtchedBorder` según tus pre
 
 `EtchedBorder border=new EtchedBorder(EtchedBorder.LOWERED,Color.BLUE,Color.green);`
 
-
-
 .::`EmptyBorder`::.
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde vacío o sin decoración alrededor de un componente. Puedes usar `EmptyBorder` con el método `setBorder` para establecer un espacio en blanco alrededor del componente sin ningún tipo de línea o decoración visual.
@@ -296,41 +294,67 @@ Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para c
 
 En el ejemplo anterior, hemos creado un `EmptyBorder` con márgenes personalizados de 10 píxeles en la parte superior, 20 píxeles a la derecha, 10 píxeles en la parte inferior y 20 píxeles a la izquierda. Puedes ajustar estos valores según tus necesidades para crear un espacio en blanco alrededor del componente.
 
-
-
 .:: `BevelBorder`::.
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde con efecto de biselado alrededor de un componente. Puedes usar `BevelBorder` con el método `setBorder` para darle a un componente un aspecto de biselado, que puede ser útil para resaltar o separar visualmente ciertos componentes en tu interfaz de usuario.Los bordes biselados tienen una apariencia tridimensional que puede ayudar a resaltar y dar profundidad a los componentes.
 
-
-
 La clase `BevelBorder` permite configurar si deseas un borde con un efecto de relieve o de hundimiento (biselado hacia arriba o hacia abajo). Tienes dos constantes principales para especificar el tipo de biselado:
-
-
 
 **Tipo de borde (`RAISED` o `LOWERED`)**: Puedes especificar si el efecto de bisel debe ser "levantado" (`RAISED`) o "hundido" (`LOWERED`) utilizando el primer argumento en el constructor del `BevelBorder`.
 
-
-
 **Colores personalizados**: Puedes especificar los colores que se utilizarán para el efecto de bisel en las esquinas superior izquierda (`highlightOuterColor`) e inferior derecha (`shadowOuterColor`) y en las esquinas inferior izquierda (`highlightInnerColor`) y superior derecha (`shadowInnerColor`). Estos colores se pasan como argumentos en el constructor.
 
-
-
 BevelBorder customHighlightBorder = new BevelBorder(BevelBorder.RAISED o LOWERED,  highlightOuterColor,highlightInnerColor,shadowOuterColor, shadowInnerColor);
-
-
 
 `BevelBorder border = new BevelBorder(BevelBorder.LOWERED,`
 
 `Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW);`
 
-
-
 .::`TitledBorder`::. 
 
-Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para agregar un título con borde a un componente, como un `JPanel`, `JScrollPane`, o cualquier otro componente que pueda recibir un borde. Esto permite etiquetar y dar contexto a un componente dentro de la interfaz de usuario.
+Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para agregar un título con borde a un componente, como un `JPanel`, `JScrollPane`, o cualquier otro componente que pueda recibir un borde. 
 
-`TitledBorder titledBorder = new TitledBorder("Este es un panel con título");`
+Esta clase permite personalizar la apariencia del título mediante varias propiedades.
+
+1. **Texto del título (`title`)**: Puedes especificar el texto que aparecerá como título utilizando el constructor `TitledBorder(String title)`. Por ejemplo:
+   
+   ```java
+   TitledBorder titledBorder = new TitledBorder("Mi Título");
+   ```
+
+2. **Posición del título (`titlePosition`)**: Puedes controlar la posición del título en relación con el componente contenedor utilizando el método `setTitlePosition(int titlePosition)`. Las posiciones comunes incluyen `TitledBorder.DEFAULT_POSITION`, `TitledBorder.ABOVE_TOP`, `TitledBorder.TOP`, `TitledBorder.BELOW_TOP`, `TitledBorder.ABOVE_BOTTOM`, `TitledBorder.BOTTOM` y `TitledBorder.BELOW_BOTTOM`. Por ejemplo:
+   
+   ```java
+   titledBorder.setTitlePosition(TitledBorder.TOP);
+   ```
+
+3. **Alineación del título (`titleJustification`)**: Puedes especificar cómo se alineará el texto del título dentro del espacio proporcionado por el `TitledBorder`. Las alineaciones comunes incluyen `TitledBorder.LEFT`, `TitledBorder.CENTER`, `TitledBorder.RIGHT` y `TitledBorder.LEADING` (izquierda en entornos de escritura de izquierda a derecha) y `TitledBorder.TRAILING` (derecha en entornos de escritura de izquierda a derecha). Por ejemplo:
+   
+   ```java
+   titledBorder.setTitleJustification(TitledBorder.CENTER);
+   ```
+
+4. **Color del título (`titleColor`)**: Puedes cambiar el color del texto del título utilizando el método `setTitleColor(Color titleColor)`. Por ejemplo:
+   
+   ```java
+   titledBorder.setTitleColor(Color.BLUE);
+   ```
+
+5. **Fuente del título (`titleFont`)**: Puedes especificar la fuente que se utilizará para el texto del título mediante el método `setTitleFont(Font titleFont)`. Por ejemplo:
+   
+   ```java
+   Font customFont = new Font("Arial", Font.BOLD, 14);
+   titledBorder.setTitleFont(customFont);
+   ```
+
+6. **Borde del título (`titleBorder`)**: Puedes agregar un borde alrededor del título utilizando el método `setTitleBorder(Border titleBorder)`. Esto puede ayudar a separar visualmente el título del contenido del contenedor. Por ejemplo:
+   
+   ```java
+   Border lineBorder = BorderFactory.createLineBorder(Color.BLACK);
+   titledBorder.setBorder(lineBorder);
+   ```
+
+Estas son algunas de las propiedades más comunes que puedes utilizar al personalizar un `TitledBorder` en Java. Puedes combinar estas opciones según tus necesidades para crear títulos personalizados y atractivos para tus componentes gráficos.
 
 - Ejemplo
 
