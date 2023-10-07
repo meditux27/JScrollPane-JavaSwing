@@ -2,11 +2,13 @@
 
 <img title="" src="https://www.jrebel.com/sites/default/files/image/2019-11/image-blog-pick-right-java-executors.jpg" alt="" width="361" data-align="inline">
 
-##### JScrollPane se utiliza para agregar barras de desplazamiento a otros componentes, como JTextArea, JTable, JList, y otros, cuando su contenido es más grande que el área visible en la pantalla.
+###### JScrollPane se utiliza para agregar barras de desplazamiento a otros componentes, como JTextArea, JTable, JList, y otros, cuando su contenido es más grande que el área visible en la pantalla.
 
-##### La principal función de JScrollPane es permitir la visualización y navegación de contenido que no cabe completamente dentro del área visible del componente subyacente. Un JScrollPane proporciona tanto barras de desplazamiento horizontales como verticales (o solo una de ellas, dependiendo de las necesidades) y envuelve el componente al que se le desea agregar la funcionalidad de desplazamiento.
+###### La principal función de JScrollPane es permitir la visualización y navegación de contenido que no cabe completamente dentro del área visible del componente subyacente. Un JScrollPane proporciona tanto barras de desplazamiento horizontales como verticales (o solo una de ellas, dependiendo de las necesidades) y envuelve el componente al que se le desea agregar la funcionalidad de desplazamiento.
 
 ---
+
+:book: 
 
 ###### Las características más importantes de un `JScrollPane` en Swing son las siguientes:
 
@@ -29,6 +31,8 @@
 9. **Integración con otros componentes**: `JScrollPane` se integra fácilmente con otros componentes Swing, lo que te permite crear interfaces de usuario más complejas que admiten el desplazamiento de contenido enriquecido, como tablas grandes, áreas de texto extensas y listas largas.
 
 ---
+
+:clipboard: 
 
 ###### Pasos para implementar JScrollPane
 
@@ -70,11 +74,15 @@ Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 
 ` frame.add(scrollPane);`
 
+
+
+:coffee:
+
 [Estructura basica](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/basic/EjemploJScrollPane.java)
 
 ---
 
-> :beginner: setViewportView()
+> :beginner: **setViewportView()**
 
 - Descripción
 
@@ -82,21 +90,27 @@ Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 
 - Sintaxis
 
-scrollPane.setViewportView(textArea);
+`scrollPane.setViewportView(textArea);`
 
 - Nota
 
 Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
 
-`JScrollPane scrollPane = new JScrollPane();`
+```java
+JScrollPane scrollPane = new JScrollPane();
+```
 
-`JTextArea textArea = new JTextArea(10, 20);`
+```java
+JTextArea textArea = new JTextArea(10, 20);
+```
 
-//Se agrega el componente
+Se agrega el componente
 
-`scrollPane.setViewportView(textArea);`
+```java
+scrollPane.setViewportView(textArea);
+```
 
-- Ejemplo
+- Ejemplo:coffee:
 
 [ setViewportView]( https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
 
@@ -116,15 +130,15 @@ scrollPane.getViewport();
 
 Para ver el funciónamiento del método, es necesario no solo recibir el parametro si no, evidenciar tanto los datos obtenidos como manipularlos 
 
-// Crear un JScrollPane y agregar el JTextArea a él 
+ Crear un JScrollPane y agregar el JTextArea a él 
 
 `JScrollPane scrollPane = new JScrollPane(textArea); `
 
-// Obtener el Viewport del JScrollPane 
+ Obtener el Viewport del JScrollPane 
 
 `JViewport viewport = scrollPane.getViewport();`
 
-// Cambiar el color de fondo del Viewport 
+ Cambiar el color de fondo del Viewport 
 
 `viewport.setBackground(Color.lightGray);`
 
