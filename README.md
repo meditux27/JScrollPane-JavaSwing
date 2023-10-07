@@ -310,33 +310,45 @@ La clase `BevelBorder` permite configurar si deseas un borde con un efecto de re
 BevelBorder border = new BevelBorder(BevelBorder.LOWERED,Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW);
 ```
 
-
-
-.::`TitledBorder`::. 
+.::**`TitledBorder`**::. 
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para agregar un título con borde a un componente, como un `JPanel`, `JScrollPane`, o cualquier otro componente que pueda recibir un borde. 
 
 Esta clase permite personalizar la apariencia del título mediante varias propiedades.
 
-1. **Texto del título (`title`)**: Puedes especificar el texto que aparecerá como título utilizando el constructor `TitledBorder(String title)`. Por ejemplo:
+1. **Texto del título (`title`)**: Puedes especificar el texto que aparecerá como título utilizando el constructor `TitledBorder(String title)`. 
+   
+   Por ejemplo:
    
    ```java
    TitledBorder titledBorder = new TitledBorder("Mi Título");
    ```
 
-2. **Posición del título (`titlePosition`)**: Puedes controlar la posición del título en relación con el componente contenedor utilizando el método `setTitlePosition(int titlePosition)`. Las posiciones comunes incluyen `TitledBorder.DEFAULT_POSITION`, `TitledBorder.ABOVE_TOP`, `TitledBorder.TOP`, `TitledBorder.BELOW_TOP`, `TitledBorder.ABOVE_BOTTOM`, `TitledBorder.BOTTOM` y `TitledBorder.BELOW_BOTTOM`. Por ejemplo:
+2. **Posición del título (`titlePosition`)**: Puedes controlar la posición del título en relación con el componente contenedor utilizando el método `setTitlePosition(int titlePosition)`.
+   
+   
+   
+   Las posiciones comunes incluyen `TitledBorder.DEFAULT_POSITION`, `TitledBorder.ABOVE_TOP`, `TitledBorder.TOP`, `TitledBorder.BELOW_TOP`, `TitledBorder.ABOVE_BOTTOM`, `TitledBorder.BOTTOM` y `TitledBorder.BELOW_BOTTOM`. 
+   
+   Por ejemplo:
    
    ```java
    titledBorder.setTitlePosition(TitledBorder.TOP);
    ```
 
-3. **Alineación del título (`titleJustification`)**: Puedes especificar cómo se alineará el texto del título dentro del espacio proporcionado por el `TitledBorder`. Las alineaciones comunes incluyen `TitledBorder.LEFT`, `TitledBorder.CENTER`, `TitledBorder.RIGHT` y `TitledBorder.LEADING` (izquierda en entornos de escritura de izquierda a derecha) y `TitledBorder.TRAILING` (derecha en entornos de escritura de izquierda a derecha). Por ejemplo:
+3. **Alineación del título (`titleJustification`)**: Puedes especificar cómo se alineará el texto del título dentro del espacio proporcionado por el `TitledBorder`. 
+   
+   Las alineaciones comunes incluyen `TitledBorder.LEFT`, `TitledBorder.CENTER`, `TitledBorder.RIGHT` y `TitledBorder.LEADING` (izquierda en entornos de escritura de izquierda a derecha) y `TitledBorder.TRAILING` (derecha en entornos de escritura de izquierda a derecha). 
+   
+   Por ejemplo:
    
    ```java
    titledBorder.setTitleJustification(TitledBorder.CENTER);
    ```
 
-4. **Color del título (`titleColor`)**: Puedes cambiar el color del texto del título utilizando el método `setTitleColor(Color titleColor)`. Por ejemplo:
+4. **Color del título (`titleColor`)**: Puedes cambiar el color del texto del título utilizando el método `setTitleColor(Color titleColor)`. 
+   
+   Por ejemplo:
    
    ```java
    titledBorder.setTitleColor(Color.BLUE);
@@ -356,11 +368,11 @@ Esta clase permite personalizar la apariencia del título mediante varias propie
    titledBorder.setBorder(lineBorder);
    ```
 
-Estas son algunas de las propiedades más comunes que puedes utilizar al personalizar un `TitledBorder` en Java. Puedes combinar estas opciones según tus necesidades para crear títulos personalizados y atractivos para tus componentes gráficos.
 
-- Ejemplo
 
-[setTitle](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+- Ejemplos
+
+[TitledBorder](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/TitledBorderExample.java)
 
 ---
 
