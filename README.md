@@ -8,33 +8,29 @@
 
 ---
 
-:book: 
+:book:  **Las características más importantes de un `JScrollPane` en Swing son las siguientes:**
 
-###### Las características más importantes de un `JScrollPane` en Swing son las siguientes:
+1. **Barras de desplazamiento**: JScrollPane proporciona barras de desplazamiento vertical y horizontal (según sea necesario) que permiten al usuario desplazarse a través del contenido cuando este es más grande que el área visible de la ventana.
 
-1. **Barras de desplazamiento**: `JScrollPane` proporciona barras de desplazamiento vertical y horizontal (según sea necesario) que permiten al usuario desplazarse a través del contenido cuando este es más grande que el área visible de la ventana.
+2. **Envuelve contenido**: Puedes agregar cualquier componente Swing como contenido del JScrollPane, como un JTextArea, JTable, JList, u otro. El JScrollPane envuelve este componente y proporciona las barras de desplazamiento necesarias.
 
-2. **Envuelve contenido**: Puedes agregar cualquier componente Swing como contenido del `JScrollPane`, como un `JTextArea`, `JTable`, `JList`, u otro. El `JScrollPane` envuelve este componente y proporciona las barras de desplazamiento necesarias.
+3. **Personalización**: Puedes personalizar el comportamiento del JScrollPane según tus necesidades. Por ejemplo, puedes especificar si se deben mostrar barras de desplazamiento horizontal o vertical o ambas, y puedes ajustar el comportamiento de desplazamiento.
 
-3. **Personalización**: Puedes personalizar el comportamiento del `JScrollPane` según tus necesidades. Por ejemplo, puedes especificar si se deben mostrar barras de desplazamiento horizontal o vertical o ambas, y puedes ajustar el comportamiento de desplazamiento.
-
-4. **Vistas y ventanas gráficas**: Un `JScrollPane` puede tener una vista y una ventana gráfica. La vista es el componente contenido que muestra el contenido completo, mientras que la ventana gráfica es la parte del contenido visible a través del área de visualización del `JScrollPane`. Esto permite tener una representación visual del área visible en relación con el contenido completo.
+4. **Vistas y ventanas gráficas**: Un JScrollPane puede tener una vista y una ventana gráfica. La vista es el componente contenido que muestra el contenido completo, mientras que la ventana gráfica es la parte del contenido visible a través del área de visualización del JScrollPane. Esto permite tener una representación visual del área visible en relación con el contenido completo.
 
 5. **Desplazamiento programático**: Además de permitir al usuario desplazarse con las barras, puedes realizar desplazamientos programáticos utilizando métodos como `setVerticalScrollBar`, `setHorizontalScrollBar`, `getVerticalScrollBar`, `getHorizontalScrollBar`, entre otros.
 
-6. **Eventos de desplazamiento**: `JScrollPane` emite eventos de desplazamiento que puedes escuchar y responder a través de controladores de eventos para realizar acciones específicas cuando el usuario interactúa con las barras de desplazamiento.
+6. **Eventos de desplazamiento**: JScrollPane emite eventos de desplazamiento que puedes escuchar y responder a través de controladores de eventos para realizar acciones específicas cuando el usuario interactúa con las barras de desplazamiento.
 
-7. **Bordes y decoraciones**: Puedes personalizar la apariencia del `JScrollPane` al agregar bordes y decoraciones. Esto te permite integrar el `JScrollPane` en el diseño general de tu interfaz de usuario.
+7. **Bordes y decoraciones**: Puedes personalizar la apariencia del JScrollPane al agregar bordes y decoraciones. Esto te permite integrar el JScrollPane en el diseño general de tu interfaz de usuario.
 
-8. **Zoom y escalado**: Puedes utilizar `JScrollPane` para implementar funcionalidades de zoom o escalado de contenido, permitiendo al usuario ver detalles específicos o una vista más amplia según sea necesario.
+8. **Zoom y escalado**: Puedes utilizar JScrollPane para implementar funcionalidades de zoom o escalado de contenido, permitiendo al usuario ver detalles específicos o una vista más amplia según sea necesario.
 
-9. **Integración con otros componentes**: `JScrollPane` se integra fácilmente con otros componentes Swing, lo que te permite crear interfaces de usuario más complejas que admiten el desplazamiento de contenido enriquecido, como tablas grandes, áreas de texto extensas y listas largas.
+9. **Integración con otros componentes**: JScrollPane se integra fácilmente con otros componentes Swing, lo que te permite crear interfaces de usuario más complejas que admiten el desplazamiento de contenido enriquecido, como tablas grandes, áreas de texto extensas y listas largas.
 
 ---
 
-:clipboard: 
-
-###### Pasos para implementar JScrollPane
+:clipboard: **Pasos para implementar JScrollPane**
 
 1. **Importa las clases necesarias**:
 
@@ -76,9 +72,7 @@ Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 
 
 
-:coffee:
-
-[Estructura basica](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/basic/EjemploJScrollPane.java)
+:coffee: [Estructura basica](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/basic/EjemploJScrollPane.java)
 
 ---
 
@@ -116,7 +110,7 @@ scrollPane.setViewportView(textArea);
 
 ---
 
-> :beginner: getViewport()
+> :beginner: **getViewport()**
 
 - Descripción
 
@@ -124,7 +118,9 @@ Este método devuelve el área de visualización o "Viewport" asociada a ese `JS
 
 - Sintaxis
 
+```java
 scrollPane.getViewport();
+```
 
 - Nota
 
@@ -132,7 +128,7 @@ Para ver el funciónamiento del método, es necesario no solo recibir el paramet
 
  Crear un JScrollPane y agregar el JTextArea a él 
 
-`JScrollPane scrollPane = new JScrollPane(textArea); `
+`JScrollPane scrollPane = new JScrollPane(textArea);`
 
  Obtener el Viewport del JScrollPane 
 
@@ -142,13 +138,13 @@ Para ver el funciónamiento del método, es necesario no solo recibir el paramet
 
 `viewport.setBackground(Color.lightGray);`
 
-- Ejemplo
+- Ejemplo:coffee:
 
 [getViewport](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/ScrollPaneViewportExample.java)
 
 ---
 
-> :beginner: setHorizontalScrollBarPolicy()  &  setVerticalScrollBarPolicy()
+> :beginner: **setHorizontalScrollBarPolicy()  &  setVerticalScrollBarPolicy()**
 
 - Descripción
 
@@ -156,15 +152,11 @@ Estos métodos permiten controlar cuándo se mostrarán las barras de desplazami
 
 - Sintaxis
 
-JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED  
-
-o
-
-JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
+`.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);`
 
 - Nota
 
-`setHorizontalScrollBarPolicy(int policy)`
+**setHorizontalScrollBarPolicy(int policy)**
 
 Este método se utiliza para establecer la política de visualización de la barra de desplazamiento horizontal en un JScrollPane. Toma un argumento de tipo entero que especifica la política y puede ser uno de los siguientes valores:
 
@@ -174,7 +166,9 @@ Este método se utiliza para establecer la política de visualización de la bar
 
 - `JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento horizontal se mostrará siempre, independientemente de si el contenido es más ancho que el área visible o no.
 
-`setVerticalScrollBarPolicy(int policy)`: Este método es similar al anterior, pero se utiliza para establecer la política de visualización de la barra de desplazamiento vertical en el JScrollPane. También toma un argumento de tipo entero que puede ser uno de los siguientes valores:
+**setVerticalScrollBarPolicy(int policy)**
+
+Este método es similar al anterior, pero se utiliza para establecer la política de visualización de la barra de desplazamiento vertical en el JScrollPane. También toma un argumento de tipo entero que puede ser uno de los siguientes valores:
 
 - `JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED`: La barra de desplazamiento vertical se mostrará automáticamente cuando sea necesario, es decir, cuando el contenido sea más alto que el área visible en el JScrollPane.
 
@@ -182,13 +176,15 @@ Este método se utiliza para establecer la política de visualización de la bar
 
 - `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento vertical se mostrará siempre, independientemente de si el contenido es más alto que el área visible o no.
 
-- Ejemplo
+
+
+- Ejemplo:coffee:
 
 [setHorizontalScrollBarPolicy() & setVerticalScrollBarPolicy()](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneScrollbar.java)
 
 ---
 
-> :beginner: getVerticalScrollBar()  &  getHorizontalScrollBar()
+> :beginner: **getVerticalScrollBar()  &  getHorizontalScrollBar()**
 
 - Descripción
 
@@ -196,13 +192,15 @@ Estos métodos te permiten acceder a los objetos `JScrollBar` correspondientes a
 
 - Sintaxis
 
-JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();
+`JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();`
 
-JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
+`JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();`
 
 - Nota
 
-`getVerticalScrollBar()`: Este método se utiliza para obtener una referencia a la barra de desplazamiento vertical de un componente. Por lo general, se llama en un objeto JScrollPane para acceder a su barra de desplazamiento vertical.
+**getVerticalScrollBar()**
+
+Este método se utiliza para obtener una referencia a la barra de desplazamiento vertical de un componente. Por lo general, se llama en un objeto JScrollPane para acceder a su barra de desplazamiento vertical.
 
 `JScrollPane scrollPane = new JScrollPane();`
 
