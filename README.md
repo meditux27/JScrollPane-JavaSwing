@@ -36,7 +36,9 @@
 
    Asegúrate de importar las clases necesarias de Swing. Estas son algunas de las clases comunes que se utilizan junto con `JScrollPane`:
 
-`import javax.swing.*;`
+```java
+import javax.swing.*;
+```
 
 2. **Crea tu componente de contenido**:
 
@@ -44,13 +46,17 @@
 
    Por ejemplo, si deseas usar un `JTextArea`: 
 
-`JTextArea textArea = new JTextArea(10, 30);`
+```java
+JTextArea textArea = new JTextArea(10, 30);
+```
 
 3. **Crea un `JScrollPane` y agrega tu componente de contenido**:
 
    A continuación, crea una instancia de `JScrollPane` y agrega tu componente de contenido al `JScrollPane`. Esto envolverá el componente de contenido y proporcionará las barras de desplazamiento necesarias.
 
-` JScrollPane scrollPane = new JScrollPane(textArea); `
+```java
+JScrollPane scrollPane = new JScrollPane(textArea);
+```
 
 4. **Personaliza el comportamiento (opcional)**:
 
@@ -58,9 +64,13 @@
 
 Personaliza el comportamiento (opcional)
 
-`scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);`
+```java
+scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+```
 
-`scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);`
+```java
+scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+```
 
 5. **Agrega el `JScrollPane` a tu contenedor principal**:
 
@@ -68,7 +78,9 @@ Finalmente, agrega el `JScrollPane` al contenedor principal de tu interfaz de us
 
 Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 
-` frame.add(scrollPane);`
+```java
+frame.add(scrollPane);
+```
 
 
 
@@ -84,25 +96,21 @@ Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 
 - Sintaxis
 
-`scrollPane.setViewportView(textArea);`
+```java
+scrollPane.setViewportView(textArea);
+```
 
 - Nota
 
 Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
 
-```java
-JScrollPane scrollPane = new JScrollPane();
-```
+`JScrollPane scrollPane = new JScrollPane();`
 
-```java
-JTextArea textArea = new JTextArea(10, 20);
-```
+`JTextArea textArea = new JTextArea(10, 20);`
 
 Se agrega el componente
 
-```java
-scrollPane.setViewportView(textArea);
-```
+`scrollPane.setViewportView(textArea);`
 
 - Ejemplo:coffee:
 
@@ -152,7 +160,12 @@ Estos métodos permiten controlar cuándo se mostrarán las barras de desplazami
 
 - Sintaxis
 
-`.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);`
+```java
+scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); 
+scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+```
+
+
 
 - Nota
 
@@ -192,9 +205,11 @@ Estos métodos te permiten acceder a los objetos `JScrollBar` correspondientes a
 
 - Sintaxis
 
-`JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();`
+```java
+JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();
 
-`JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();`
+JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
+```
 
 - Nota
 
