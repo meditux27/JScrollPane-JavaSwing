@@ -1,16 +1,14 @@
 # JScrollPane - JavaSwing
 
-<img title="" src="https://www.jrebel.com/sites/default/files/image/2019-11/image-blog-pick-right-java-executors.jpg" alt="" width="361" data-align="inline">
+<img title="" src="https://www.jrebel.com/sites/default/files/image/2019-11/image-blog-pick-right-java-executors.jpg" alt="" width="361" data-align="center">
 
-###### JScrollPane se utiliza para agregar barras de desplazamiento a otros componentes, como JTextArea, JTable, JList, y otros, cuando su contenido es más grande que el área visible en la pantalla.
-
-###### La principal función de JScrollPane es permitir la visualización y navegación de contenido que no cabe completamente dentro del área visible del componente subyacente. Un JScrollPane proporciona tanto barras de desplazamiento horizontales como verticales (o solo una de ellas, dependiendo de las necesidades) y envuelve el componente al que se le desea agregar la funcionalidad de desplazamiento.
+##### La principal función de JScrollPane es permitir la visualización y navegación de contenido que no cabe completamente dentro del área visible del componente subyacente. Un JScrollPane proporciona tanto barras de desplazamiento horizontales como verticales (o solo una de ellas, dependiendo de las necesidades) y envuelve el componente al que se le desea agregar la funcionalidad de desplazamiento.
 
 ---
 
 :book:  **Las características más importantes de un `JScrollPane` en Swing son las siguientes:**
 
-1. **Barras de desplazamiento**: JScrollPane proporciona barras de desplazamiento vertical y horizontal (según sea necesario) que permiten al usuario desplazarse a través del contenido cuando este es más grande que el área visible de la ventana.
+1. **Barras de desplazamiento**: JScrollPane proporciona barras de desplazamiento vertical y horizontal (según sea necesario) que permiten al usuario desplazarse a través del contenido cuando esté, es más grande que el área visible de la ventana.
 
 2. **Envuelve contenido**: Puedes agregar cualquier componente Swing como contenido del JScrollPane, como un JTextArea, JTable, JList, u otro. El JScrollPane envuelve este componente y proporciona las barras de desplazamiento necesarias.
 
@@ -34,7 +32,7 @@
 
 1. **Importa las clases necesarias**:
 
-   Asegúrate de importar las clases necesarias de Swing. Estas son algunas de las clases comunes que se utilizan junto con `JScrollPane`:
+   Asegúrate de importar las clases necesarias de Swing. 
 
 ```java
 import javax.swing.*;
@@ -52,7 +50,7 @@ JTextArea textArea = new JTextArea(10, 30);
 
 3. **Crea un `JScrollPane` y agrega tu componente de contenido**:
 
-   A continuación, crea una instancia de `JScrollPane` y agrega tu componente de contenido al `JScrollPane`. Esto envolverá el componente de contenido y proporcionará las barras de desplazamiento necesarias.
+   A continuación, crea una instancia de JScrollPane y agrega tu componente de contenido al JScrollPane. Esto envolverá el componente de contenido y proporcionará las barras de desplazamiento necesarias.
 
 ```java
 JScrollPane scrollPane = new JScrollPane(textArea);
@@ -60,7 +58,7 @@ JScrollPane scrollPane = new JScrollPane(textArea);
 
 4. **Personaliza el comportamiento (opcional)**:
 
-   Puedes personalizar el comportamiento del `JScrollPane` según tus necesidades. Por ejemplo, puedes especificar si se deben mostrar barras de desplazamiento vertical, horizontal o ambas. También puedes configurar otros aspectos del comportamiento de desplazamiento, como las políticas de desplazamiento.
+   Puedes personalizar el comportamiento del JScrollPane según tus necesidades. Por ejemplo, puedes especificar si se deben mostrar barras de desplazamiento vertical, horizontal o ambas. 
 
 Personaliza el comportamiento (opcional)
 
@@ -72,11 +70,11 @@ scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 ```
 
-5. **Agrega el `JScrollPane` a tu contenedor principal**:
+5. **Agrega el JScrollPane a tu contenedor principal**:
 
-Finalmente, agrega el `JScrollPane` al contenedor principal de tu interfaz de usuario (por lo general, un `JFrame` o un `JPanel`).
+Finalmente, agrega el JScrollPane al contenedor principal de tu interfaz de usuario (por lo general, un JFrame o un JPanel).
 
-Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
+
 
 ```java
 frame.add(scrollPane);
