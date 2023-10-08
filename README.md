@@ -2,7 +2,7 @@
 
 <img title="" src="https://www.jrebel.com/sites/default/files/image/2019-11/image-blog-pick-right-java-executors.jpg" alt="" width="361" data-align="center">
 
-##### La principal función de JScrollPane es permitir la visualización y navegación de contenido que no cabe completamente dentro del área visible del componente subyacente. Un JScrollPane proporciona tanto barras de desplazamiento horizontales como verticales (o solo una de ellas, dependiendo de las necesidades) y envuelve el componente al que se le desea agregar la funcionalidad de desplazamiento.
+#### La principal función de JScrollPane es permitir la visualización y navegación de contenido que no cabe completamente dentro del área visible del componente subyacente. Un JScrollPane proporciona tanto barras de desplazamiento horizontales como verticales (o solo una de ellas, dependiendo de las necesidades) y envuelve el componente al que se le desea agregar la funcionalidad de desplazamiento.
 
 ---
 
@@ -74,8 +74,6 @@ scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS)
 
 Finalmente, agrega el JScrollPane al contenedor principal de tu interfaz de usuario (por lo general, un JFrame o un JPanel).
 
-
-
 ```java
 frame.add(scrollPane);
 ```
@@ -100,7 +98,11 @@ scrollPane.setViewportView(textArea);
 
 Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
 
+creación de scrollpane
+
 `JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
 
 `JTextArea textArea = new JTextArea(10, 20);`
 

@@ -9,14 +9,13 @@ public class JScrollPaneSetViewportViewExample {
         JFrame frame = new JFrame("Ejemplo de JScrollPane con setViewportView()");
 
         // Establecer el tamaño del JFrame
-        frame.setSize(600, 180);
+        frame.setSize(200, 180);
         //Establece la posición de la ventana 
         frame.setLocationRelativeTo(null);
 
         // Crear un JTextArea grande
         JTextArea textArea = new JTextArea(10, 20);
-        textArea.setLineWrap(true); // Activar el ajuste de línea automático
-        textArea.setWrapStyleWord(true); // Dividir palabras en líneas
+        
 
         // Crear un JScrollPane y configurar el contenido con setViewportView()
         JScrollPane scrollPane = new JScrollPane();
