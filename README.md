@@ -82,8 +82,6 @@ Agrega el JScrollPane al contenedor principal (por ejemplo, un JFrame)
 frame.add(scrollPane);
 ```
 
-
-
 :coffee: [Estructura basica](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/basic/EjemploJScrollPane.java)
 
 ---
@@ -92,7 +90,7 @@ frame.add(scrollPane);
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del `JScrollPane`. El componente `view` será el contenido que se envuelve y se desplazará.
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
 
 - Sintaxis
 
@@ -122,7 +120,7 @@ Se agrega el componente
 
 - Descripción
 
-Este método devuelve el área de visualización o "Viewport" asociada a ese `JScrollPane`. El `Viewport` es la parte del `JScrollPane` que muestra el contenido desplazable, como un `JTextArea`, una tabla o cualquier otro componente que pueda ser más grande que el área de visualización del `JScrollPane`.
+Este método devuelve el área de visualización o "Viewport" asociada a ese JScrollPane. El Viewport es la parte del JScrollPane que muestra el contenido desplazable, como un JTextArea, una tabla o cualquier otro componente que pueda ser más grande que el área de visualización del JScrollPane.
 
 - Sintaxis
 
@@ -165,8 +163,6 @@ scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS)
 scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 ```
 
-
-
 - Nota
 
 **setHorizontalScrollBarPolicy(int policy)**
@@ -188,8 +184,6 @@ Este método es similar al anterior, pero se utiliza para establecer la polític
 - `JScrollPane.VERTICAL_SCROLLBAR_NEVER`: La barra de desplazamiento vertical nunca se mostrará, incluso si el contenido es más alto que el área visible.
 
 - `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento vertical se mostrará siempre, independientemente de si el contenido es más alto que el área visible o no.
-
-
 
 - Ejemplo:coffee:
 
@@ -227,45 +221,51 @@ Este método se utiliza para obtener una referencia a la barra de desplazamiento
 
 `JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();`
 
-- Ejemplo
+- Ejemplo:coffee:
 
 [getVerticalScrollBar() & getHorizontalScrollBar()](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/CustomScrollBarExample.java)
 
 ---
 
-> :beginner: setWheelScrollingEnabled()
+> :beginner: **setWheelScrollingEnabled()**
 
 - Descripción
 
-Este método permite habilitar o deshabilitar el desplazamiento con la rueda del ratón en el `JScrollPane`.
+Este método permite habilitar o deshabilitar el desplazamiento con la rueda del ratón en el JScrollPane.
 
 - Sintaxis
 
-scrollPane.setWheelScrollingEnabled(true | false);
+```java
+scrollPane.setWheelScrollingEnabled(true);
+```
 
 - Nota
 
-Cuando está habilitado, los usuarios pueden usar la rueda del ratón para desplazarse hacia arriba o hacia abajo en el contenido dentro del `JScrollPane`. Cuando está deshabilitado, la rueda del ratón no tendrá efecto en el `JScrollPane`, y el desplazamiento solo se puede realizar a través de las barras de desplazamiento si están presentes.
+Cuando está habilitado, los usuarios pueden usar la rueda del ratón para desplazarse hacia arriba o hacia abajo en el contenido dentro del JScrollPane. Cuando está deshabilitado, la rueda del ratón no tendrá efecto en el JScrollPane, y el desplazamiento solo se puede realizar a través de las barras de desplazamiento si están presentes.
 
 Para el uso del metodo se debe instanciar JScrollpane, posteriormente llamar la variable asignada y agregar .setWheelScrollingEnabled()
 
 `JScrollPane scrollPane = new JScrollPane();`
 
-// Habilitar el desplazamiento mediante la rueda del ratón
+
+
+ Habilitar el desplazamiento mediante la rueda del ratón
 
 `scrollPane.setWheelScrollingEnabled(true);`
 
-// O deshabilitar el desplazamiento mediante la rueda del ratón
+
+
+ O deshabilitar el desplazamiento mediante la rueda del ratón
 
 `scrollPane.setWheelScrollingEnabled(false);`
 
-- Ejemplo
+- Ejemplo:coffee:
 
 [setWheelScrollingEnabled](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/SetWheelScrolling.java)
 
 ---
 
-> :beginner: setBorder()
+> :beginner: **setBorder()**
 
 - Descripción
 
@@ -273,17 +273,17 @@ Utiliza este método para establecer un borde alrededor del `JScrollPane` para p
 
 - Sintaxis
 
+```java
 scrollPane.setBorder(border);
+```
 
 - Nota
 
 Este método toma como argumento un objeto que implementa la interfaz `Border`, que puede ser una de las clases proporcionadas por la biblioteca Swing, como `LineBorder`, `EtchedBorder`, `BevelBorder`, `TitledBorder`, entre otras, o puedes crear una clase personalizada que implemente la interfaz `Border`.
 
-.::**`LineBorder`** ::.
+.::**LineBorder** ::.
 
-Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde simple de línea alrededor de un componente. Puedes usar `LineBorder` con el método `setBorder` para darle a un componente un borde de línea con un color y grosor específicos.
-
-`LineBorder lineBorder = new LineBorder(Color.BLUE, 2);`
+Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde simple de línea alrededor de un componente. Puedes usar `LineBorder` con el método `setBorder` para darle a un componente un borde de línea con un color y grosor específicos
 
 Puedes personalizar las siguientes propiedades del `LineBorder` según tus preferencias:
 
@@ -292,16 +292,18 @@ Puedes personalizar las siguientes propiedades del `LineBorder` según tus prefe
 2. **Grosor**: Puedes definir el grosor del borde en píxeles. En el ejemplo, usamos un grosor de 2 píxeles mediante `new LineBorder(Color.BLUE, 2)`.
 
 3. **RoundedCorners**: Puedes habilitar o deshabilitar las esquinas redondeadas del borde utilizando un tercer argumento en el constructor. Por ejemplo, `new LineBorder(Color.BLUE, 2, true)` habilitaría las esquinas redondeadas.
+   
+   
 
-4. 
+```java
+LineBorder lineBorder = new LineBorder(Color.BLUE, 2,true);
+```
 
-`LineBorder lineBorder = new LineBorder(Color.BLUE, 2,true);`
 
-.::**`EtchedBorder`**::.
+
+.::**EtchedBorder**::.
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde con efecto de relieve o grabado alrededor de un componente. Puedes usar `EtchedBorder` con el método `setBorder` para darle a un componente un aspecto en relieve, que puede ser útil para resaltar o separar visualmente ciertos componentes en tu interfaz de usuario.
-
-`EtchedBorder etchedBorder = new EtchedBorder(EtchedBorder.RAISED);`
 
 Puedes personalizar las siguientes propiedades del `EtchedBorder` según tus preferencias:
 
@@ -311,25 +313,33 @@ Puedes personalizar las siguientes propiedades del `EtchedBorder` según tus pre
 
 3. **Color del sombreado**: Para personalizar el color del sombreado en el relieve o hundimiento
 
-`EtchedBorder border=new EtchedBorder(EtchedBorder.LOWERED,Color.BLUE,Color.green);`
+```java
+EtchedBorder border=new EtchedBorder(EtchedBorder.LOWERED,Color.BLUE,Color.green);
+```
 
-.::`EmptyBorder`::.
+
+
+.::**EmptyBorder**::.
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde vacío o sin decoración alrededor de un componente. Puedes usar `EmptyBorder` con el método `setBorder` para establecer un espacio en blanco alrededor del componente sin ningún tipo de línea o decoración visual.
 
-`EmptyBorder emptyBorder = new EmptyBorder(10, 20, 10, 20);`
+```java
+EmptyBorder emptyBorder = new EmptyBorder(10, 20, 10, 20);
+```
 
 En el ejemplo anterior, hemos creado un `EmptyBorder` con márgenes personalizados de 10 píxeles en la parte superior, 20 píxeles a la derecha, 10 píxeles en la parte inferior y 20 píxeles a la izquierda. Puedes ajustar estos valores según tus necesidades para crear un espacio en blanco alrededor del componente.
 
-.:: `BevelBorder`::.
+
+
+.:: **BevelBorder**::.
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde con efecto de biselado alrededor de un componente. Puedes usar `BevelBorder` con el método `setBorder` para darle a un componente un aspecto de biselado, que puede ser útil para resaltar o separar visualmente ciertos componentes en tu interfaz de usuario.Los bordes biselados tienen una apariencia tridimensional que puede ayudar a resaltar y dar profundidad a los componentes.
 
 La clase `BevelBorder` permite configurar si deseas un borde con un efecto de relieve o de hundimiento (biselado hacia arriba o hacia abajo). Tienes dos constantes principales para especificar el tipo de biselado:
 
-**Tipo de borde (`RAISED` o `LOWERED`)**: Puedes especificar si el efecto de bisel debe ser "levantado" (`RAISED`) o "hundido" (`LOWERED`) utilizando el primer argumento en el constructor del `BevelBorder`.
+1. **Tipo de borde (`RAISED` o `LOWERED`)**: Puedes especificar si el efecto de bisel debe ser "levantado" (`RAISED`) o "hundido" (`LOWERED`) utilizando el primer argumento en el constructor del `BevelBorder`.
 
-**Colores personalizados**: Puedes especificar los colores que se utilizarán para el efecto de bisel en las esquinas superior izquierda (`highlightOuterColor`) e inferior derecha (`shadowOuterColor`) y en las esquinas inferior izquierda (`highlightInnerColor`) y superior derecha (`shadowInnerColor`). Estos colores se pasan como argumentos en el constructor.
+2. **Colores personalizados**: Puedes especificar los colores que se utilizarán para el efecto de bisel en las esquinas superior izquierda (`highlightOuterColor`) e inferior derecha (`shadowOuterColor`) y en las esquinas inferior izquierda (`highlightInnerColor`) y superior derecha (`shadowInnerColor`). Estos colores se pasan como argumentos en el constructor.
 
 `BevelBorder customHighlightBorder = new BevelBorder(BevelBorder.RAISED o LOWERED,highlightOuterColor,highlightInnerColor,shadowOuterColor, shadowInnerColor);`
 
@@ -337,7 +347,7 @@ La clase `BevelBorder` permite configurar si deseas un borde con un efecto de re
 BevelBorder border = new BevelBorder(BevelBorder.LOWERED,Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW);
 ```
 
-.::**`TitledBorder`**::. 
+.::**TitledBorder**::. 
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para agregar un título con borde a un componente, como un `JPanel`, `JScrollPane`, o cualquier otro componente que pueda recibir un borde. 
 
@@ -345,19 +355,13 @@ Esta clase permite personalizar la apariencia del título mediante varias propie
 
 1. **Texto del título (`title`)**: Puedes especificar el texto que aparecerá como título utilizando el constructor `TitledBorder(String title)`. 
    
-   Por ejemplo:
-   
    ```java
    TitledBorder titledBorder = new TitledBorder("Mi Título");
    ```
 
 2. **Posición del título (`titlePosition`)**: Puedes controlar la posición del título en relación con el componente contenedor utilizando el método `setTitlePosition(int titlePosition)`.
    
-   
-   
-   Las posiciones comunes incluyen `TitledBorder.DEFAULT_POSITION`, `TitledBorder.ABOVE_TOP`, `TitledBorder.TOP`, `TitledBorder.BELOW_TOP`, `TitledBorder.ABOVE_BOTTOM`, `TitledBorder.BOTTOM` y `TitledBorder.BELOW_BOTTOM`. 
-   
-   Por ejemplo:
+    Las posiciones comunes incluyen `TitledBorder.DEFAULT_POSITION`, `TitledBorder.ABOVE_TOP`, `TitledBorder.TOP`, `TitledBorder.BELOW_TOP`, `TitledBorder.ABOVE_BOTTOM`, `TitledBorder.BOTTOM` y `TitledBorder.BELOW_BOTTOM`. 
    
    ```java
    titledBorder.setTitlePosition(TitledBorder.TOP);
@@ -367,51 +371,46 @@ Esta clase permite personalizar la apariencia del título mediante varias propie
    
    Las alineaciones comunes incluyen `TitledBorder.LEFT`, `TitledBorder.CENTER`, `TitledBorder.RIGHT` y `TitledBorder.LEADING` (izquierda en entornos de escritura de izquierda a derecha) y `TitledBorder.TRAILING` (derecha en entornos de escritura de izquierda a derecha). 
    
-   Por ejemplo:
-   
    ```java
    titledBorder.setTitleJustification(TitledBorder.CENTER);
    ```
 
 4. **Color del título (`titleColor`)**: Puedes cambiar el color del texto del título utilizando el método `setTitleColor(Color titleColor)`. 
    
-   Por ejemplo:
-   
    ```java
    titledBorder.setTitleColor(Color.BLUE);
    ```
 
-5. **Fuente del título (`titleFont`)**: Puedes especificar la fuente que se utilizará para el texto del título mediante el método `setTitleFont(Font titleFont)`. Por ejemplo:
+5. **Fuente del título (`titleFont`)**: Puedes especificar la fuente que se utilizará para el texto del título mediante el método `setTitleFont(Font titleFont)`. 
    
    ```java
    Font customFont = new Font("Arial", Font.BOLD, 14);
    titledBorder.setTitleFont(customFont);
    ```
 
-6. **Borde del título (`titleBorder`)**: Puedes agregar un borde alrededor del título utilizando el método `setTitleBorder(Border titleBorder)`. Esto puede ayudar a separar visualmente el título del contenido del contenedor. Por ejemplo:
+6. **Borde del título (`titleBorder`)**: Puedes agregar un borde alrededor del título utilizando el método `setTitleBorder(Border titleBorder)`. Esto puede ayudar a separar visualmente el título del contenido del contenedor. 
    
    ```java
    Border lineBorder = BorderFactory.createLineBorder(Color.BLACK);
    titledBorder.setBorder(lineBorder);
    ```
-
-
-
-- Ejemplos
+- Ejemplos:coffee:
 
 [TitledBorder](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/TitledBorderExample.java)
 
 ---
 
-:beginner: setComponentOrientation(()
+:beginner: **setComponentOrientation()**
 
 - Descripción
 
-Este método te permite establecer la orientación de los componentes dentro del `JScrollPane`. Esto es útil cuando trabajas con idiomas que se escriben de derecha a izquierda.
+Este método te permite establecer la orientación de los componentes dentro del JScrollPane. Esto es útil cuando trabajas con idiomas que se escriben de derecha a izquierda.
 
 - Sintaxis
 
-`setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);`
+```java
+setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+```
 
 - Nota
 
@@ -419,18 +418,12 @@ La orientación de los componentes se refiere a cómo se disponen y se ajustan l
 
 Crear un JScrollPane  
 
-```java
-JScrollPane scrollPane = new JScrollPane(textArea);
-```
+`JScrollPane scrollPane = new JScrollPane(textArea);`
 
- Establecer la orientación de los componentes a RIGHT_TO_LEFT 
+Establecer la orientación de los componentes a RIGHT_TO_LEFT 
 
-```java
-scrollPane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-```
+`scrollPane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);`
 
-
-
-- Ejemplo
+- Ejemplo:coffee:
 
 [setComponentOrientation](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/setComponentOrientationExample.java)
