@@ -132,17 +132,17 @@ scrollPane.getViewport();
 
 Para ver el funciónamiento del método, es necesario no solo recibir el parametro si no, evidenciar tanto los datos obtenidos como manipularlos 
 
- Crear un JScrollPane y agregar el JTextArea a él 
+Se agrega el scollpane a un textarea previamente instanciado para el ejemplo
 
 `JScrollPane scrollPane = new JScrollPane(textArea);`
 
- Obtener el Viewport del JScrollPane 
+Se utiliza el metodo getViewport que permite guardar en la variable viewport su contenido 
 
 `JViewport viewport = scrollPane.getViewport();`
 
- Cambiar el color de fondo del Viewport 
+Con el contenido previamente guardado, se imprime el alto del viewport
 
-`viewport.setBackground(Color.lightGray);`
+`System.out.println(viewport.getWidth());`
 
 - Ejemplo:coffee:
 
@@ -154,7 +154,7 @@ Para ver el funciónamiento del método, es necesario no solo recibir el paramet
 
 - Descripción
 
-Estos métodos permiten controlar cuándo se mostrarán las barras de desplazamiento y cómo se comportarán en función de las necesidades de la aplicación.
+Estos métodos permiten controlar, cuándo se mostrarán las barras de desplazamiento y cómo se comportarán en función de las necesidades de la aplicación.
 
 - Sintaxis
 
@@ -195,7 +195,7 @@ Este método es similar al anterior, pero se utiliza para establecer la polític
 
 - Descripción
 
-Estos métodos te permiten acceder a los objetos `JScrollBar` correspondientes a las barras de desplazamiento vertical y horizontal, respectivamente. Puedes personalizar sus propiedades, como su valor actual, su rango, etc.
+Estos métodos te permiten acceder a los objetos JScrollBar correspondientes a las barras de desplazamiento vertical y horizontal, respectivamente. Puedes personalizar sus propiedades, como su valor actual, su rango, etc.
 
 - Sintaxis
 
@@ -211,13 +211,27 @@ JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
 
 Este método se utiliza para obtener una referencia a la barra de desplazamiento vertical de un componente. Por lo general, se llama en un objeto JScrollPane para acceder a su barra de desplazamiento vertical.
 
+
+
+Se crea una objeto scrollpane
+
 `JScrollPane scrollPane = new JScrollPane();`
+
+Se obtiene los valores de scrollpane con el metodo getVerticalScrollBar y se guardan en la varibale verticalScrollBar
 
 `JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();`
 
-`getHorizontalScrollBar()`: Similar al método anterior, este se utiliza para obtener una referencia a la barra de desplazamiento horizontal de un componente.
+
+
+**getHorizontalScrollBar()**
+
+Similar al método anterior, este se utiliza para obtener una referencia a la barra de desplazamiento horizontal de un componente.
+
+Se crea una objeto scrollpane
 
 `JScrollPane scrollPane = new JScrollPane();` 
+
+Se obtiene los valores de scrollpane con el metodo getHorizontalScrollBar y se guardan en la varibale horizontalScrollBar
 
 `JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();`
 

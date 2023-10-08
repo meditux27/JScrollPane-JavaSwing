@@ -29,6 +29,7 @@ public class JScrollPaneSetViewportViewExample {
 
         // Mostrar el JFrame
         frame.setVisible(true);
+        
     }
 }
 
