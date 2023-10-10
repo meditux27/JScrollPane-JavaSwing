@@ -394,7 +394,7 @@ Esta clase permite personalizar la apariencia del título mediante varias propie
    ```
 - Ejemplos:coffee:
 
-[TitledBorder](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPanesetBorder.java)
+[setBorder](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPanesetBorder.java)
 
 ---
 
