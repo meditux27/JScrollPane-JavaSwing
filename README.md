@@ -211,8 +211,6 @@ JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
 
 Este método se utiliza para obtener una referencia a la barra de desplazamiento vertical de un componente. Por lo general, se llama en un objeto JScrollPane para acceder a su barra de desplazamiento vertical.
 
-
-
 Se crea una objeto scrollpane
 
 `JScrollPane scrollPane = new JScrollPane();`
@@ -220,8 +218,6 @@ Se crea una objeto scrollpane
 Se obtiene los valores de scrollpane con el metodo getVerticalScrollBar y se guardan en la varibale verticalScrollBar
 
 `JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();`
-
-
 
 **getHorizontalScrollBar()**
 
@@ -261,13 +257,9 @@ Para el uso del metodo se debe instanciar JScrollpane, posteriormente llamar la 
 
 `JScrollPane scrollPane = new JScrollPane();`
 
-
-
  Habilitar el desplazamiento mediante la rueda del ratón
 
 `scrollPane.setWheelScrollingEnabled(true);`
-
-
 
  O deshabilitar el desplazamiento mediante la rueda del ratón
 
@@ -306,14 +298,10 @@ Puedes personalizar las siguientes propiedades del `LineBorder` según tus prefe
 2. **Grosor**: Puedes definir el grosor del borde en píxeles. En el ejemplo, usamos un grosor de 2 píxeles mediante `new LineBorder(Color.BLUE, 2)`.
 
 3. **RoundedCorners**: Puedes habilitar o deshabilitar las esquinas redondeadas del borde utilizando un tercer argumento en el constructor. Por ejemplo, `new LineBorder(Color.BLUE, 2, true)` habilitaría las esquinas redondeadas.
-   
-   
 
 ```java
 LineBorder lineBorder = new LineBorder(Color.BLUE, 2,true);
 ```
-
-
 
 .::**EtchedBorder**::.
 
@@ -331,8 +319,6 @@ Puedes personalizar las siguientes propiedades del `EtchedBorder` según tus pre
 EtchedBorder border=new EtchedBorder(EtchedBorder.LOWERED,Color.BLUE,Color.green);
 ```
 
-
-
 .::**EmptyBorder**::.
 
 Es una clase proporcionada por la biblioteca Swing de Java que se utiliza para crear un borde vacío o sin decoración alrededor de un componente. Puedes usar `EmptyBorder` con el método `setBorder` para establecer un espacio en blanco alrededor del componente sin ningún tipo de línea o decoración visual.
@@ -342,8 +328,6 @@ EmptyBorder emptyBorder = new EmptyBorder(10, 20, 10, 20);
 ```
 
 En el ejemplo anterior, hemos creado un `EmptyBorder` con márgenes personalizados de 10 píxeles en la parte superior, 20 píxeles a la derecha, 10 píxeles en la parte inferior y 20 píxeles a la izquierda. Puedes ajustar estos valores según tus necesidades para crear un espacio en blanco alrededor del componente.
-
-
 
 .:: **BevelBorder**::.
 
@@ -410,7 +394,7 @@ Esta clase permite personalizar la apariencia del título mediante varias propie
    ```
 - Ejemplos:coffee:
 
-[TitledBorder](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/TitledBorderExample.java)
+[TitledBorder](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPanesetBorder.java)
 
 ---
 
