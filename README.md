@@ -40,7 +40,7 @@ import javax.swing.*;
 
 2. **Crea tu componente de contenido**:
 
-   Primero, crea el componente de Swing que deseas envolver con un `JScrollPane`. Esto puede ser un `JTextArea`, `JTable`, `JList`, o cualquier otro componente que necesite barras de desplazamiento para mostrar su contenido.
+Primero, crea el componente de Swing que deseas envolver con un `JScrollPane`. Esto puede ser un `JTextArea`, `JTable`, `JList`, o cualquier otro componente que necesite barras de desplazamiento para mostrar su contenido.
 
    Por ejemplo, si deseas usar un `JTextArea`: 
 
